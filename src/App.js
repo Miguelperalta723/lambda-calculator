@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React from "react";
 import "./App.css";
 // STEP 4 - import the button and display components
 import {Display} from './components/DisplayComponents/Display'
@@ -8,7 +8,7 @@ import Operators from "../src/components/ButtonComponents/OperatorButtons/Operat
 import Specials from "../src/components/ButtonComponents/SpecialButtons/Specials"
 // Logo has already been provided for you. Do the same for the remaining components
 import Logo from "./components/DisplayComponents/Logo";
-import { numberLiteralTypeAnnotation } from "@babel/types";
+// import { numberLiteralTypeAnnotation } from "@babel/types";
 
 function App() {
   // STEP 5 - After you get the components displaying using the provided data file, write your state hooks here.
@@ -20,17 +20,20 @@ function App() {
   // const btnPress = (btnValue) => {
   //   setCount(btnValue)
   // }
+  
+
   return (
     <div className="container">
       <Logo />
-      <Display   
-      // count={count}
-      // setCount={setCount}
-      />
+      <Display />
       <div className="App">
-        <Specials />
-        <Numbers />
-        <Operators />
+        <div className="specials">
+          <Specials />
+          <Numbers />
+          </div>
+        <div className="operators">
+           <Operators />
+          </div>
       
       </div>
     </div>
